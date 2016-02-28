@@ -1,0 +1,31 @@
+_repo: Letters-from-High-Latitudes-Being-Some-Account-of-a-Voyage-in-1856-of-the-Schooner-Yacht-Foam-__3701
+creator:
+  author:
+    agent_name: Dufferin and Ava, Frederick Temple Blackwood, Marquis of
+    aliases:
+    - Dufferin and Ava, Frederick Temple Hamilton-Temple-Blackwood, Marquis of
+    - Dufferin, Frederick Temple Blackwood, Earl of
+    - Dufferin, Lord
+    - Blackwood, Frederick Temple, Earl of Dufferin
+    - Hamilton-Temple-Blackwood, Frederick Temple, Marquis of Dufferin and Ava
+    birthdate: 1826
+    deathdate: 1902
+    gutenberg_agent_id: '1271'
+    url: http://www.gutenberg.org/2009/agents/1271
+    wikipedia: http://en.wikipedia.org/wiki/Frederick_Hamilton-Temple-Blackwood,_1st_Marquess_of_Dufferin_and_Ava
+description: ''
+gutenberg_issued: '2003-02-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '3701'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Arctic regions'
+- !lcsh 'Iceland -- Description and travel'
+- !lcc 'DL'
+title: "Letters from High Latitudes\r\nBeing Some Account of a Voyage in 1856 of the\
+  \ Schooner Yacht \"Foam\" to Iceland, Jan Meyen, and Spitzbergen"
+url: http://www.gutenberg.org/ebooks/3701
