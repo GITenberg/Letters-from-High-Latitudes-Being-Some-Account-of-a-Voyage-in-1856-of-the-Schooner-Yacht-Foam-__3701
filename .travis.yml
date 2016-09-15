@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: cYomUCrOqLFsId2ligfvBU6i/mVqB5ZNfez2vwz2eBCLCSPGGi05lkA4lGtH9/ZtR1mdwJR5xs4FZjAXAA/lJd/2Z+XSjdo49VSVgi/Dn6feBj0d87V2xIPJNlqkx3NbXlCVwZCSuL4Qw5mATe9lO/gz9vrPYKDz3Rh/72ktjwWNp5KBZGBxHHhpjhNf1yX40StVjJS4UcHe/f/UK/TsA7VWhsxzmFja0RqtmG179WTOnYtfn+HrAjJ9Zz/DSv8+9kqS+x02KVEndeHm3Mvl1eCYwWXm/d9P1MWUje/Ovr8WelRFC2XVJqplxcbcQ0XxZQnrqDSmuOCdE5czHXqtTKLas9FWiteu1aPP5RBqZt2ximSJF/KpFpq8hEQZ9G2zp6enYoTmAVrgirmD3r6jqR7q7Ob1dymV2ONh9wcxZ/l8w36zn1DQbQ7cAyDK5SgqnxgXSLhqpgU2zhMVdSjE3yAqKHD1IXhI4VzhmEIUVGjrSzdjJDSl/KI8FHCncJL6XGlqyAIeQkY6E308AKLGXi1jforRaxFLdfFeevh6XSnMJMqu9S4eBtnMbomrmBLgyXqu4GyQz248pWWUH5CkdCjZIFoNmKlK63ZH3K3VNEKU9pu6YjQgdx9VZ96BR8dGVoRbQZ7PFUniBe5eMYgSk4fi1ns/EGUsQgoRk6sRWSA=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/Letters-from-High-Latitudes-Being-Some-Account-of-a-Voyage-in-1856-of-the-Schooner-Yacht-Foam-__3701
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
