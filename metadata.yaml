@@ -1,5 +1,8 @@
 _repo: Letters-from-High-Latitudes-Being-Some-Account-of-a-Voyage-in-1856-of-the-Schooner-Yacht-Foam-__3701
-_version: 0.1.0
+_version: 0.2.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   author:
     agent_name: Dufferin and Ava, Frederick Temple Blackwood, Marquis of
@@ -15,6 +18,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/1271
     wikipedia: http://en.wikipedia.org/wiki/Frederick_Hamilton-Temple-Blackwood,_1st_Marquess_of_Dufferin_and_Ava
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/3701#Letters-from-High-Latitudes-Being-Some-Account-of-a-Voyage-in-1856-of-the-Schooner-Yacht-Foam-_
 gutenberg_issued: '2003-02-01'
 gutenberg_type: Text
 identifiers:
