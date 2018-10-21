@@ -1,5 +1,5 @@
 _repo: Letters-from-High-Latitudes-Being-Some-Account-of-a-Voyage-in-1856-of-the-Schooner-Yacht-Foam-__3701
-_version: 0.2.0
+_version: 0.2.1
 covers:
 - cover_type: generated
   image_path: cover.png
@@ -32,6 +32,7 @@ subjects:
 - !lcsh 'Arctic regions'
 - !lcsh 'Iceland -- Description and travel'
 - !lcc 'DL'
+- GITenberg
 title: "Letters from High Latitudes\r\nBeing Some Account of a Voyage in 1856 of the\
   \ Schooner Yacht \"Foam\" to Iceland, Jan Meyen, and Spitzbergen"
 url: http://www.gutenberg.org/ebooks/3701
